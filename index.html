@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vishwasneha C V — Portfolio</title>
+<meta name="description" content="Portfolio of Vishwasneha C V — Machine Learning, DSA, AR, Hackathon finalist."/>
+<link rel="icon" href="data:,">
+<style>
+  /* ---------- Reset & Base ---------- */
+  :root{
+    --bg:#0f1724; --card:#0b1220; --muted:#9aa6bd; --accent:#7c5cff;
+    --glass: rgba(255,255,255,0.03);
+    --text: #e6eef8;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+    background:linear-gradient(180deg,#071128 0%, #071827 60%);
+    color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+  }
+  a{color:inherit; text-decoration:none}
+  .container{max-width:1000px;margin:0 auto;padding:28px;}
+  header{position:sticky;top:0;backdrop-filter:blur(6px);background:linear-gradient(180deg, rgba(7,8,14,0.6), transparent);z-index:90;padding:10px 0}
+  nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .nav-left{display:flex;gap:16px;align-items:center}
+  .brand{font-weight:700;letter-spacing:0.2px}
+  .nav-right{display:flex;gap:10px;align-items:center}
+  .nav-right a{padding:8px 12px;border-radius:10px;font-size:14px;color:var(--muted)}
+  .nav-right a.primary{background:linear-gradient(90deg,var(--accent),#4da1ff); color:#fff}
+  .hero{display:flex;gap:24px;align-items:center;padding:48px 0}
+  .hero-left{flex:1}
+  .hero h1{font-size:2rem;margin:0 0 8px}
+  .hero p{color:var(--muted);margin:0 0 18px}
+  .cta{display:flex;gap:12px}
+  .btn{padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer;border:0}
+  .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+  .avatar{width:140px;height:140px;border-radius:18px;flex-shrink:0;overflow:hidden;box-shadow:0 6px 30px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.04)}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  /* ---------- sections ---------- */
+  section{padding:42px 0;border-top:1px solid rgba(255,255,255,0.02)}
+  h2{font-size:1.15rem;margin:0 0 18px}
+  .muted{color:var(--muted);font-size:0.95rem}
+  /* Projects grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+  .card h3{margin:0 0 8px;font-size:1rem}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.03);color:var(--muted)}
+  .card p{color:var(--muted);font-size:0.95rem;margin:0}
+  .card .actions{display:flex;gap:8px;margin-top:12px}
+  .pill{font-size:13px;padding:8px 10px;border-radius:10px;border:0;cursor:pointer}
+  .pill.secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+  /* Experience / skills */
+  .flex{display:flex;gap:12px;align-items:center}
+  .skills{display:flex;gap:10px;flex-wrap:wrap}
+  .skill{padding:8px 10px;border-radius:999px;background:var(--glass);font-size:13px;color:var(--muted)}
+  /* Footer */
+  footer{padding:18px 0;color:var(--muted);font-size:13px;text-align:center}
+  /* Modal */
+  .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:24px;z-index:200}
+  .modal.show{display:flex}
+  .modal-inner{width:100%;max-width:820px;background:linear-gradient(180deg,#071428,#071029);padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+  .modal .close{float:right;border:0;background:transparent;color:var(--muted);font-size:18px;cursor:pointer}
+  /* responsive */
+  @media (max-width:760px){
+    .hero{flex-direction:column;align-items:flex-start}
+    .avatar{width:120px;height:120px}
+    nav{padding:0 6px}
+  }
+  /* small helpers */
+  .small{font-size:13px;color:var(--muted)}
+  .code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",monospace;background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="nav-left">
+        <div class="brand">Vishwasneha C V</div>
+        <div class="small muted">ML • DSA • AR</div>
+      </div>
+      <div class="nav-right">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="primary btn" style="background:var(--accent);color:white">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h1>Hi, I'm <span style="color:var(--accent)">Vishwasneha C V</span></h1>
+      <p class="muted">Aspiring Software Engineer & Machine Learning enthusiast. I build ML solutions, Flask web apps and AR prototypes. Hackathon finalist (national level).</p>
+      <div class="cta">
+        <a class="btn" href="#projects" style="background:linear-gradient(90deg,var(--accent),#4da1ff);color:white">See Projects</a>
+        <a class="btn btn-outline" href="mailto:vishwasnehacv@gmail.com">Email me</a>
+        <a class="btn btn-outline" href="https://github.com/VishwasnehaCV" target="_blank">GitHub</a>
+        <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
+      </div>
+      <div style="margin-top:18px" class="small muted">Based in Bengaluru, India • Open to internships & projects</div>
+      <div style="margin-top:18px" class="small">Phone: <span class="code">+91 9353442566</span></div>
+    </div>
+    <div class="avatar">
+      <!-- Replace the src with your photo -->
+      <img src="https://avatars.githubusercontent.com/u/000?v=4" alt="Your photo (replace in index.html)">
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Selected Projects</h2>
+    <p class="muted">Shortlist of projects — click <em>Details</em> to learn more.</p>
+
+    <div class="grid" id="projects-grid">
+      <!-- Project card 1 -->
+      <div class="card">
+        <h3>Lung Cancer Detection (CNN)</h3>
+        <p class="muted">CNN model on chest X-rays classifying Pneumonia vs Normal; data augmentation, batch norm, dropout, saved model files.</p>
+        <div class="tags">
+          <div class="tag">Python</div><div class="tag">Keras</div><div class="tag">OpenCV</div><div class="tag">Flask</div>
+        </div>
+        <div class="actions">
+          <button class="pill" onclick="openModal('lung')">Details</button>
+          <a class="pill secondary" href="https://github.com/VishwasnehaCV" target="_blank">Code</a>
+        </div>
+      </div>
+
+      <!-- Project card 2 -->
+      <div class="card">
+        <h3>Sentiment Analysis — Amazon Reviews</h3>
+        <p class="muted">Text classification for positive/neutral/negative reviews; preprocessing, feature extraction, deployed as Flask API.</p>
+        <div class="tags">
+          <div class="tag">NLP</div><div class="tag">Flask</div><div class="tag">scikit-learn</div>
+        </div>
+        <div class="actions">
+          <button class="pill" onclick="openModal('sentiment')">Details</button>
+          <a class="pill secondary" href="https://github.com/VishwasnehaCV" target="_blank">Code</a>
+        </div>
+      </div>
+
+      <!-- Project card 3 -->
+      <div class="card">
+        <h3>AR-Webstore</h3>
+        <p class="muted">Browser AR experience using A-Frame and AR.js to preview 3D objects in real space; product showcase concept.</p>
+        <div class="tags">
+          <div class="tag">A-Frame</div><div class="tag">AR.js</div><div class="tag">Three.js</div>
+        </div>
+        <div class="actions">
+          <button class="pill" onclick="openModal('ar')">Details</button>
+          <a class="pill secondary" href="https://github.com/VishwasnehaCV/AR-Webstore" target="_blank">Repo</a>
+        </div>
+      </div>
+
+      <!-- Project card 4 -->
+      <div class="card">
+        <h3>Library Management System (Java)</h3>
+        <p class="muted">Java + MySQL application with CRUD operations, JDBC integration and role-based access for admin/users.</p>
+        <div class="tags">
+          <div class="tag">Java</div><div class="tag">MySQL</div><div class="tag">JDBC</div>
+        </div>
+        <div class="actions">
+          <button class="pill" onclick="openModal('library')">Details</button>
+          <a class="pill secondary" href="https://github.com/VishwasnehaCV" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience & Achievements</h2>
+    <div class="card">
+      <p class="muted">• National-level hackathon: 7th place (top 20 → top 7) among 180+ teams. <br>
+        • Built and deployed multiple Flask web apps and ML models. <br>
+        • Project work for Akshaya Institute of Technology (lung cancer detection model & others).</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills" style="margin-bottom:16px">
+      <div class="skill">Python</div><div class="skill">Machine Learning</div><div class="skill">Keras / TensorFlow</div>
+      <div class="skill">Flask</div><div class="skill">OpenCV</div><div class="skill">Java</div><div class="skill">HTML/CSS/JS</div><div class="skill">MongoDB</div><div class="skill">AWS EC2</div>
+    </div>
+    <p class="muted small">I prefer keeping simple, single-file frontends but also build Flask backends and REST APIs for model deployment.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+      <div style="flex:1;">
+        <p class="muted">Email: <a href="mailto:vishwasnehacv@gmail.com">vishwasnehacv@gmail.com</a></p>
+        <p class="muted">GitHub: <a href="https://github.com/VishwasnehaCV" target="_blank">github.com/VishwasnehaCV</a></p>
+        <p class="muted">Open to internships, ML projects, and collaborations.</p>
+      </div>
+      <div style="min-width:260px">
+        <form onsubmit="contactSubmit(event)">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <input id="fname" placeholder="Your name" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)">
+            <input id="femail" type="email" placeholder="Your email" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)">
+            <textarea id="fmsg" placeholder="Message" rows="4" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--text)"></textarea>
+            <button class="btn" style="background:var(--accent);color:white;border-radius:10px">Send</button>
+            <div id="contact-msg" class="small muted" style="display:none"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="small muted">Built with ♥ • © <span id="thisYear"></span> Vishwasneha C V</div>
+  </footer>
+</main>
+
+<!-- Modal (project details) -->
+<div id="modal" class="modal">
+  <div class="modal-inner">
+    <button class="close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+  // small helpers
+  document.getElementById('thisYear').textContent = new Date().getFullYear();
+
+  function openModal(key){
+    const modal = document.getElementById('modal');
+    const content = document.getElementById('modal-content');
+    modal.classList.add('show');
+
+    const data = {
+      'lung': {
+        title: 'Lung Cancer Detection (CNN)',
+        body: `<p class="muted">Used a CNN trained on chest X-ray images (3000+ images); techniques: data augmentation, batch normalization, dropout; optimizer: RMSprop; loss: binary crossentropy. Saved models: <span class="code">cnn_model.h5</span> and pickled files. Deployed as a Flask app with OpenCV preprocessing.</p>
+               <p class="small"><strong>What I learned:</strong> handling medical images, model tuning, class imbalance handling, deploying model as API.</p>
+               <p class="small">Links: <a href="https://github.com/VishwasnehaCV" target="_blank">GitHub repo</a>.</p>`
+      },
+      'sentiment': {
+        title: 'Sentiment Analysis — Amazon Reviews',
+        body: `<p class="muted">Preprocessing of product reviews, feature extraction, trained classifiers for 3-class sentiment (positive/neutral/negative). Built REST API using Flask to accept text and return predictions.</p>
+               <p class="small"><strong>Tech:</strong> scikit-learn, Flask, NLTK/spacy.</p>`
+      },
+      'ar': {
+        title: 'AR-Webstore',
+        body: `<p class="muted">Built a browser AR prototype using A-Frame and AR.js to preview photorealistic 3D objects in AR. Focus on UX for product preview and simple add-to-cart mockup.</p>
+               <p class="small">Try embedding models as glTF with proper PBR materials for realism.</p>`
+      },
+      'library': {
+        title: 'Library Management System (Java)',
+        body: `<p class="muted">A Java desktop app with MySQL backend. CRUD features for books, student/teacher users, and role-based access. Integrated via JDBC.</p>`
+      }
+    };
+
+    const item = data[key];
+    content.innerHTML = `<h3 style="margin-top:6px">${item.title}</h3>` + item.body;
+  }
+
+  function closeModal(){
+    document.getElementById('modal').classList.remove('show');
+  }
+
+  // contact form (client-side only)
+  function contactSubmit(e){
+    e.preventDefault();
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('femail').value.trim();
+    const msg = document.getElementById('fmsg').value.trim();
+    const cm = document.getElementById('contact-msg');
+    // Basic client feedback -- set up server/email later
+    cm.style.display = 'block';
+    cm.textContent = 'Thanks, ' + (name||'there') + '! This form is local — to receive messages, connect a service (Netlify forms, Formspree, or a server).';
+    // reset
+    document.querySelector('#contact form')?.reset();
+  }
+
+  // Smooth scroll for nav links
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const href = a.getAttribute('href');
+      if(href.startsWith('#')){
+        e.preventDefault();
+        const el = document.querySelector(href);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+    })
+  });
+</script>
+</body>
+</html>
