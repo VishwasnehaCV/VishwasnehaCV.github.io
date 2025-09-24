@@ -278,7 +278,7 @@
     const cm = document.getElementById('contact-msg');
     // Basic client feedback -- set up server/email later
     cm.style.display = 'block';
-    cm.textContent = 'Thanks, ' + (name||'there') + '! This form is local — to receive messages, connect a service (Netlify forms, Formspree, or a server).';
+    cm.textContent = 'Thanks, ' + (name||'there') + '.';
     // reset
     document.querySelector('#contact form')?.reset();
   }
